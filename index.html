@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <main class="container">
+
+    <header class="header">
+      <div class="tag">🕰 Time Calculator</div>
+      <h1 class="title">How Old<br/><em>Are You?</em></h1>
+      <p class="subtitle">Enter your date of birth and discover the exact measure of your existence.</p>
+    </header>
+
+    <section class="card">
+      <div class="form-group">
+        <label>Day</label>
+        <input type="number" id="day" placeholder="DD" min="1" max="31"/>
+      </div>
+      <div class="form-group">
+        <label>Month</label>
+        <input type="number" id="month" placeholder="MM" min="1" max="12"/>
+      </div>
+      <div class="form-group">
+        <label>Year</label>
+        <input type="number" id="year" placeholder="YYYY" min="1900" max="2025"/>
+      </div>
+
+      <button class="btn" id="calcBtn">
+        <span class="btn-text">Calculate Age</span>
+        <span class="btn-icon">→</span>
+      </button>
+
+      <p class="error" id="error"></p>
+    </section>
+
+    <section class="result-section" id="resultSection">
+      <div class="result-label">You have lived exactly</div>
+      <div class="result-grid">
+        <div class="result-block">
+          <span class="result-number" id="years">—</span>
+          <span class="result-unit">Years</span>
+        </div>
+        <div class="divider">:</div>
+        <div class="result-block">
+          <span class="result-number" id="months">—</span>
+          <span class="result-unit">Months</span>
+        </div>
+        <div class="divider">:</div>
+        <div class="result-block">
+          <span class="result-number" id="days">—</span>
+          <span class="result-unit">Days</span>
+        </div>
+      </div>
+
+      <div class="extra-stats" id="extraStats">
+        <div class="stat">
+          <span class="stat-icon">📅</span>
+          <span class="stat-label">Next Birthday</span>
+          <span class="stat-value" id="nextBday">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">⏳</span>
+          <span class="stat-label">Days Until Birthday</span>
+          <span class="stat-value" id="daysLeft">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">🌍</span>
+          <span class="stat-label">Total Days Lived</span>
+          <span class="stat-value" id="totalDays">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">💓</span>
+          <span class="stat-label">Heartbeats (approx)</span>
+          <span class="stat-value" id="heartbeats">—</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class=""></footer>
+
+  </main>
+
+</body>
+</html>
